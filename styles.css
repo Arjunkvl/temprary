@@ -25,6 +25,9 @@ body {
     position: relative;
     overflow: hidden;
 }
+.bkg img{
+    filter: blur(2);
+}
 
 .main {
     background-color: white;
