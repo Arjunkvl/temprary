@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Know Us</title>
+  </head>
+  <body bgcolor="black">
+    <a href="../index.html" style="text-decoration: none;"><h2 style="text-align: end;color: white;">Home</h2></a>
+
+    <h1 style="font-family: fantasy; text-align: center; padding-bottom: 4vw">
+      Students Of D2
+    </h1>
+    <div class="stage" id="container">
+      <script>
+        // Reference to the container
+        const container = document.getElementById("container");
+
+        // Loop to create 40 copies of the div with the image
+        for (let i = 0; i < 40; i++) {
+          // Create the img-holder div
+          const hold = document.createElement("div");
+          hold.style = "text-align:center;";
+          const imgHolder = document.createElement("div");
+          imgHolder.className = "img-holder";
+
+          const name = document.createElement("h3");
+          name.textContent = "Arjun As";
+          // Create the image element
+          const img = document.createElement("img");
+          img.src = "https://i.imgur.com/DH1RPtN.jpg";
+          img.alt = "pic";
+
+          // Append image to img-holder div
+          imgHolder.appendChild(img);
+          hold.append(imgHolder);
+          hold.append(name);
+
+          // Append img-holder div to container
+          container.appendChild(hold);
+        }
+      </script>
+    </div>
+  </body>
+</html>

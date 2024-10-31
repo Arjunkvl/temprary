@@ -1,0 +1,258 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: fantasy;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.vid {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bkg {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.main {
+    background-color: white;
+    position: absolute;
+    padding: 0 ;
+    z-index: 1;
+
+}
+
+.typewriter {
+   position: absolute;
+    animation: typewriter 3s steps(100);
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+
+     
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+
+
+    100% {
+        width: 100%;
+    }
+}
+
+.header {
+    padding-top: 40vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    height: 17vw;
+
+}
+
+
+
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.grid img {
+    border-radius: 20px;
+    padding: 10px;
+    width: 70vw;
+
+}
+
+.dynamic-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dynamic-flex p {
+    font-size: 4vw;
+    font-family: monospace;
+    text-align: center;
+    width: 75%;
+}
+
+.dynamic-flex h1 {
+    padding: 0 50px 0 50px;
+    font-size: 6vw;
+}
+
+
+
+.profile-btn {
+    position: relative;
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px;
+    color: white;
+}
+
+.profile-btn:hover {
+
+    background-color: #4d585f;
+}
+
+.header-bar {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    flex-wrap: nowrap;
+    width: 100%;
+    background-color: black;
+    height: 8vw;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.header-btn {
+    font-family: fantasy;
+    border: none;
+    color: white;
+    background-color: black;
+    width: 20vw;
+    font-size: 2vw;
+    height: 8vw;
+}
+
+.header-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.seperator {
+    height: 100%;
+    width: 1px;
+    background-color: white;
+}
+
+.lead-div {
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.lead-prof {
+    padding-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lead-prof img {
+    position: relative;
+    object-fit: cover;
+    height: 100%;
+
+}
+
+.lead-prof p {
+    padding-left: 5px;
+    width: 200px;
+}
+
+.teacher{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.teacher-img{
+    overflow: hidden;
+    width: max-content;
+    height: max-content;
+}
+
+.teacher p{
+    width: 100%;
+}
+
+.teacher-img img{
+    padding-right:2vw ;
+    position: relative;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .main{
+        padding: 0;
+    }
+    .dynamic-flex {
+        padding-top: 6vw;
+        flex-direction: row;
+    }
+
+    .dynamic-flex p {
+        font-size: 1.6vw;
+       padding: 0;
+        text-align: left;
+        width: 75vw;
+    }
+
+    .dynamic-flex h1 {
+        height: max-content;
+        font-size: 2vw;
+        width: 10vw;
+    }
+
+    .grid {
+        flex-direction: row;
+        margin: 0 0 10vw 0;
+    }
+
+    .grid img {
+        width: 40vw;
+    }
+    .teacher{
+        flex-direction: row;
+    }
+    .header-bar{
+        display: flex;
+        z-index: 2;
+        position: fixed;
+        flex-wrap: nowrap;
+        width: 100%;
+        background-color: black;
+        height: 5vw;
+        justify-content: right;
+    }
+    .header-btn{
+        height: 5vw;
+    }
+}
