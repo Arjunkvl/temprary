@@ -69,9 +69,23 @@ body {
 
 }
 
+.thrs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.thr-img{
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+}
 
-
-
+.thr-img img{
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
 
 .grid {
     display: flex;
@@ -83,6 +97,7 @@ body {
 }
 
 .grid img {
+    object-fit: cover;
     border-radius: 20px;
     padding: 10px;
     width: 70vw;
@@ -195,9 +210,11 @@ body {
     align-items: center;
 }
 .teacher-img{
+    margin-right: 10px;
     overflow: hidden;
-    width: max-content;
-    height: max-content;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
 }
 
 .teacher p{
@@ -205,6 +222,7 @@ body {
 }
 
 .teacher-img img{
+    width: 100%;
     padding-right:2vw ;
     position: relative;
     top: 0;
