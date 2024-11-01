@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <title>Varsha Pradeep</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin: 20px 0 0 0;
+        padding: 0;
+
+        overflow-x: hidden;
+      }
+      .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .pic {
+        width: 250px;
+        height: 250px;
+        border-radius: 90%;
+        overflow: hidden;
+      }
+
+      .pic img {
+        height: 148%;
+        position: relative;
+        top: -12px;
+        left: -1px;
+        object-fit: cover;
+      }
+      .about {
+        flex-direction: column;
+        position: relative;
+        margin: 20px auto;
+        width: 80%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      .cnt {
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .cnt a {
+        text-decoration: none;
+      }
+      .cnt h2 {
+        color: grey;
+        font-family: monospace;
+        text-decoration: none;
+      }
+      .cnt h2:hover {
+        color: white;
+      }
+      .particle {
+        position: absolute;
+        background-color: #ffffff; /* Gold color */
+        border-radius: 50%;
+        animation: particleMove 5s linear infinite;
+        opacity: 0;
+      }
+      @keyframes particleMove {
+        0% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(100vw, 100vh);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        document.body.appendChild(particle);
+        const size = Math.random() * 5 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      }
+    </script>
+    <div class="stage">
+      <div class="pic">
+        <img src="https://i.imgur.com/TvgbWZh.jpg" alt="" />
+      </div>
+      <h2>Varsha Pradeep</h2>
+    </div>
+    <div class="about">
+      <p align="center">
+        I'm Varsha Pradeep , daughter of Pradeep Kumar and Priya PK . I'm
+        studying in class 12 in Sacred Heart Higher Secondary School Payyavoor.
+        I want to become a computer engineer.
+      </p>
+      <hr width="100%" />
+      <h2>My Hobbiees are</h2>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          width: 70%;
+        "
+      >
+        <h3>Drawing</h3>
+        <h3>Listening Music</h3>
+        <h3>Reading</h3>
+      </div>
+    </div>
+    <hr width="80%" />
+    <br /><br /><br />
+    <h2 style="text-align: center">Reach out To me</h2>
+    <div class="cnt">
+      <a href="https://instagram.com/varsha__2658"><h2>instagram</h2></a>
+      <a href="mailto:varshapradeep1659@gmail.com"><h2>SayHello</h2></a>
+    </div>
+    <br /><br /><br />
+    <hr width="80%" />
+    <center>
+      <h4>created by varsha😁</h4>
+    </center>
+  </body>
+</html>

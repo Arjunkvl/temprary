@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhinav A P - Profile</title>
+    <style>
+        /* Basic reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Particle animation */
+        .particle {
+            position: absolute;
+            background-color: #d4af37; /* Gold color */
+            border-radius: 50%;
+            animation: particleMove 5s linear infinite;
+            opacity: 0;
+        }
+        @keyframes particleMove {
+            0% { transform: translate(0, 0); opacity: 1; }
+            100% { transform: translate(100vw, 100vh); opacity: 0; }
+        }
+        
+        /* Profile container */
+        .profile-container {
+            position: relative;
+            background-color: rgba(28, 28, 28, 0.8); /* Translucent dark gray for contrast */
+            border: 2px solid #d4af37; /* Gold border */
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+            z-index: 1;
+        }
+
+        /* Profile image */
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px auto;
+            border: 3px solid #d4af37; /* Gold border */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Header styling */
+        .profile-header h1 {
+            font-size: 2em;
+            color: #b33c86; /* Reddish purple */
+            animation: slideIn 1s ease-out;
+        }
+        .profile-header h3 {
+            font-size: 1.2em;
+            color: #d4af37; /* Gold */
+            margin-top: 5px;
+        }
+
+        /* Section styling */
+        .profile-section {
+            margin-top: 20px;
+            padding: 10px;
+            animation: fadeUp 1.5s ease;
+        }
+        .profile-section h2 {
+            color: #b33c86; /* Reddish purple */
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        .profile-section p {
+            color: #ccc;
+        }
+
+        /* Contact info styling */
+        .contact-info a {
+            color: #b33c86; /* Reddish purple */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #d4af37; /* Gold */
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <script>
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+            const size = Math.random() * 5 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        }
+    </script>
+
+    <div class="profile-container">
+        <!-- Profile Photo -->
+        <div class="profile-image">
+            <img src='https://i.ibb.co/rw89shL/Screenshot-2024-11-01-20-31-04-826-com-whatsapp-edit.jpg' alt="Profile Photo"> <!-- Replace 'your-photo.jpg' with the actual path to the profile image -->
+        </div>
+
+        <div class="profile-header">
+            <h1>Abhinav A P</h1>
+            <h3>Student | Aspiring Computer Science Enthusiast</h3>
+        </div>
+        
+        <div class="profile-section">
+            <h2>About Me</h2>
+            <p>Currently a 12th-grade student in the Computer Science batch at Sacred Heart HSS, Payyavoor. I have a strong interest in computers and technology, and I'm eager to explore the vast world of computer science, especially programming, software development, and problem-solving.</p>
+        </div>
+        
+        <div class="profile-section">
+            <h2>Interests and Hobbies</h2>
+            <p>Beyond academics, I’m passionate about playing football, which helps me stay active and teaches teamwork and discipline.</p>
+        </div>
+        
+        <div class="profile-section">
+            <h2>Contact Information</h2>
+            <p class="contact-info">
+                <strong>Email:</strong> <a href="mailto:abhinavap0721@gmail.com">abhinavap0721@gmail.com</a><br>
+                <strong>Phone:</strong> <a href="tel:+918431970124" onclick="alert('Save this contact as Abhinav A P')">+91 8431970124</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
