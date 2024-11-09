@@ -14,7 +14,18 @@ body{
     align-items: center;
 } */
  
+
+@keyframes imganim {
+    from{
+        transform: translateY(200px);
+    }to{
+        transform: translateY(0);
+    }
+}
 .img-holder{
+    animation: imganim;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
     width: 100px;
     height: 100px;
     display: flex;
@@ -42,12 +53,12 @@ body{
     column-gap: 11vw;
     row-gap: 1vw;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     width: 100%;
     justify-content: center;
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .stage{
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto ;
     }
 }
