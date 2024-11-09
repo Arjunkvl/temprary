@@ -5,5 +5,16 @@ window.addEventListener("load", function () {
   }
 });
 
-//Buton Related
+//header bar color change
+window.addEventListener('scroll',function(e){
+  var element = this.document.getElementById('_header');
+  var x = this.window.scrollY;
+  if(x>this.window.innerHeight){
+     element.classList.add('k');
+    
+
+  }else{
+    element.classList.remove('k');
+  }
+});
  

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrishikesh's Profile</title>
+    <style>
+        /* Background animation */
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Fullscreen animated background */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            margin: 100;
+            background: linear-gradient(270deg, #ff9a9e,#3a1c71,#ffaf7b,#4b79a1,#000000, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+            background-size: 1000% 1000%;
+            animation: gradientBackground 8s ease infinite;
+        }
+
+        /* Profile card styling */
+        .profile-card {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Profile photo styling */
+        .profile-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff9a9e;
+            margin-bottom: 20px;
+        }
+
+        /* Text styling */
+        h1 {
+            color: #333;
+            font-size: 2em;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        /* Contact link styling */
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #6a5acd;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        .contact-info a:hover {
+            color: #483d8b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-card">
+    <!-- Profile photo -->
+    <img src="https://i.ibb.co/ZXXfZTG/IMG20241102102648-01-01.jpg" alt="Hrishikesh's Photo" class="https://i.ibb.co/ZXXfZTG/IMG20241102102648-01-01.jpg">
+    
+    <!-- Profile details -->
+    <h1>Hrishikesh ES</h1>
+    <p><strong>About Me:</strong> Currently a 12th-grade student in the Computer Science batch at Sacred Heart HSS, Payyavoor. I have a strong interest in computers and technology, and I'm eager to explore the vast world of computer science, especially programming, software development, and problem-solving.</p>
+    <p><strong>Hobbies:</strong> Playing sports, reading, and watching movies.</p>
+    
+    <!-- Contact information -->
+    <p><strong>Address:</strong>Edavan(H),Mundanoor,
+    Nuchiyard(PO),
+    Kannur,Kerala.</p>
+    <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:hrishikeshes06@gmail.com">hrishikeshes06@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+9074306772">+9074306772</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/h__rishii" target="_blank">@h__rishii</a></p>
+    </div>
+</div>
+
+</body>
+</html>

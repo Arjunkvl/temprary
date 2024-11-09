@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christo Francis' Profile</title>
+  <style>
+    /* Root Colors and Theme Variables */
+    :root {
+      --dark-bg: #121212;
+      --light-bg: #ffffff;
+      --primary-accent: #ffcc00;
+      --secondary-accent: #ff6699;
+      --text-dark: #ffffff;
+      --text-light: #121212;
+      --card-bg-dark: rgba(20, 20, 20, 0.85);
+      --card-bg-light: rgba(255, 255, 255, 0.85);
+      --shadow-dark: rgba(0, 0, 0, 0.6);
+      --shadow-light: rgba(200, 200, 200, 0.6);
+    }
+
+    /* Default Dark Mode */
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text-dark);
+      background: var(--dark-bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      flex-direction: column; /* Align items vertically */
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Light Mode */
+    body.light-mode {
+      background: var(--light-bg);
+      color: var(--text-light);
+    }
+
+    /* Particle Animation */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1; /* Ensure particles are below other elements */
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--primary-accent);
+      opacity: 0.7;
+      animation: float 10s infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Dark Mode Toggle Button */
+    .mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: var(--primary-accent);
+      transition: color 0.3s;
+      z-index: 1000;
+    }
+
+    /* Profile Card */
+    .profile-card {
+      background: var(--card-bg-dark);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 12px var(--shadow-dark);
+      width: 400px;
+      margin: 20px auto;
+      position: relative;
+      z-index: 10; /* To keep card above particles */
+      overflow-y: auto; /* Enable scrolling */
+      height: 80vh; /* Set height for scrolling */
+    }
+
+    .light-mode .profile-card {
+      background: var(--card-bg-light);
+      box-shadow: 0 4px 12px var(--shadow-light);
+    }
+
+    /* Profile Photo */
+    .profile-photo-wrapper {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 20px auto;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    .profile-photo.loaded {
+      opacity: 1;
+    }
+
+    /* Section Styles */
+    h1,
+    h2 {
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--primary-accent);
+      padding-bottom: 5px;
+    }
+
+    .section {
+      margin-top: 20px;
+      line-height: 1.5;
+      text-align: left;
+      opacity: 0;
+      transition: opacity 0.5s;
+      transform: translateY(20px);
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Contact Links */
+    .contact-link {
+      color: var(--secondary-accent);
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      .profile-card {
+        padding: 15px;
+        width: 95%;
+      }
+
+      .mode-toggle {
+        font-size: 1.2em;
+      }
+    }
+
+    /* Loading Spinner */
+    .spinner {
+      border: 5px solid var(--primary-accent);
+      border-top: 5px solid transparent;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Particle Animation -->
+  <div class="particles" id="particlesContainer"></div>
+
+  <!-- Dark Mode Toggle Button -->
+  <div class="mode-toggle" id="modeToggle">🌞</div>
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <div class="profile-photo-wrapper">
+      <div class="spinner" id="loadingSpinner"></div>
+    <img src="https://i.ibb.co/bJjnDb4/Christo.jpg" alt="Professional photo of Christo Francis" class="profile-photo" id="profilePhoto">
+    </div>
+    <h1><b>Christo Francis</b></h1>
+
+    <!-- Profile Section -->
+    <div class="section">
+      <h2>Profile</h2>
+      <p><strong>Son of:</strong> Francis K.J and Sheeba E.K</p>
+      <p><strong>Date of Birth:</strong> 02/11/2006</p>
+      <p>Studying in Class 12, Computer Science stream at <a href="https://www.google.com/maps/place/Sacred+Heart+Higher+Secondary+School,+Payyavoor" target="_blank" class="contact-link">Sacred Heart HSS, Payyavoor</a>.</p>
+      <p>I graduated my tenth standard from <a href="https://www.google.com/maps/place/Devmatha+High+School,+Paisakari" target="_blank" class="contact-link">Devmatha High School, Paisakari</a>.</p>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="section">
+      <h2>Hobbies</h2>
+      <p>Calisthenics, cycling, trekking, reading sci-fi books, watching sci-fi, horror thriller, and fantasy movies.</p>
+      <p>I love to write stories.</p>
+    </div>
+
+    <!-- Ambition Section -->
+    <div class="section">
+      <h2>Ambition</h2>
+      <p>My ambition is to attain a B.Tech in AI-ML and a professional course of CMA US.</p>
+      <p>My lifetime goal is to become a successful entrepreneur.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong></p>
+      <p>Karikkattukuzhiyil (h)<br>Payyavoor (po)<br>Payyavoor<br>670 633</p>
+       <p><strong>Phone:</strong> <a href="tel:+919496370413" class="contact-link">+91 9496370413</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/c.hristo" target="_blank" class="contact-link">@c.hristo</a></p>
+      <p><strong>Email:</strong> <a href="mailto:christo88francis@gmail.com" class="contact-link">christo88francis@gmail.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Dark Mode Toggle
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+    modeToggle.onclick = () => {
+      body.classList.toggle('light-mode');
+      modeToggle.textContent = body.classList.contains('light-mode') ? '🌜' : '🌞';
+    };
+
+    // Profile Photo Loader
+    const profilePhoto = document.getElementById('profilePhoto');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+
+    profilePhoto.onload = () => {
+      profilePhoto.classList.add('loaded');
+      loadingSpinner.style.display = 'none'; // Hide spinner when loaded
+    }; // Create Particle Animation
+    const particlesContainer = document.getElementById('particlesContainer');
+
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      const size = Math.random() * 10 + 5; // Size between 5 and 15px
+      const positionX = Math.random() * window.innerWidth; // Random x position
+      const positionY = Math.random() * window.innerHeight; // Random y position
+
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+      particle.style.left = `${positionX}px`;
+      particle.style.top = `${positionY}px`;
+      particlesContainer.appendChild(particle);
+
+      // Animate particle
+      const animationDuration = Math.random() * 5 + 3; // Duration between 3 and 8 seconds
+      particle.style.animationDuration = `${animationDuration}s`;
+
+      // Remove particle after animation
+      particle.addEventListener('animationend', () => {
+        particlesContainer.removeChild(particle);
+      });
+    }
+
+    // Generate particles at intervals
+    setInterval(createParticle, 300); // Create a new particle every 300ms
+
+    // Show sections with a fade-in effect
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add('visible');
+      }, index * 300); // Delay for each section
+    });
+
+    // Google Maps Initialization
+    function initMap() {
+      // The location of Payyavoor
+      const payyavoor = { lat: 11.9995, lng: 75.4983 }; // Replace with accurate coordinates if needed
+      // The map, centered at Payyavoor
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: payyavoor,
+      });
+      // The marker, positioned at Payyavoor
+      const marker = new google.maps.Marker({
+        position: payyavoor,
+        map: map,
+      });
+    }
+  </script>
+
+  <!-- Google Maps JavaScript API -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> <!-- Replace YOUR_API_KEY -->
+
+  <style>
+    /* Map Styles */
+    #map {
+      height: 300px; /* Set the height of the map */
+      width: 100%; /* Set the width of the map */
+      border-radius: 15px;
+      box-shadow: 0 4px 12px var(--shadow-dark);
+      margin-top: 20px;
+    }
+  </style>
+
+  <!-- Map Section -->
+  <div class="section">
+    <h2>Location</h2>
+    <div id="map"></div> <!-- Map container -->
+  </div>
+</body>
+
+</html>
