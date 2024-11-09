@@ -343,10 +343,10 @@ h2 {
     height: 45%;
     padding-top: 30vh;
   }
-  .bkg {
-    height: 112vh;
-    width: 112vw;
-  }
+ .bkg{
+    width: 100vw;
+    height: 100vh;
+ }
   .header h1 {
     font-size: 137px;
   }
