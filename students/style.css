@@ -46,7 +46,7 @@ body{
     width: 100%;
     justify-content: center;
 }
-@media(min-width: 768px) {
+@media(max-width: 600px) {
     .stage{
         grid-template-columns: auto auto auto auto auto;
     }
