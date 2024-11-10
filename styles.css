@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: fantasy;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -164,7 +164,7 @@ h2 {
   padding: 0;
   text-align: left;
   width: 75vw;
-  font-family: monospace;
+  
 }
 
 @keyframes dynamich1anim {
