@@ -1,6 +1,6 @@
 @font-face {
   font-family: "roboto";
-  src: url(Fonts/Roboto-Regular.ttf);
+  src: url(../Fonts/Roboto-Regular.ttf);
 }
 body {
   margin: 5vw;
@@ -35,7 +35,6 @@ body {
   height: 100px;
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
   border-radius: 90%;
