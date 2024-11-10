@@ -15,26 +15,27 @@
         src="https://imgs.search.brave.com/K1_ZuojXbczHZ5aDLE_7mBWZhmFYheozb88tGAODepo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM0/MDUxNjc2My9waG90/by9lbXB0eS1jbGFz/c3Jvb20uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPVFoamJl/UVBpc3NObWVsejMw/V25GcWNtdV8zSVMx/SWo5dlJFbWlYLWVG/RG89"
         alt="image"
       />
-      <div class="header-bar" id="_header">
-        <a href="#aboutus"
-          ><input class="header-btn" type="button" id="btn1" value="About Us"
-        /></a>
-        <a href="#moment"
-          ><input class="header-btn" type="button" id="btn2" value="Momments"
-        /></a>
-        <a href="#techers"
-          ><input
-            class="header-btn"
-            type="button"
-            id="btn2"
-            value="Our Teachers"
-        /></a>
-        <a href="#leaders">
-          <input class="header-btn" type="button" id="btn3" value="Our Leaders"
-        /></a>
-        <a href="students/students.html">
-          <input class="header-btn" id="btn4" type="button" value="Know Us"
-        /></a>
+      <div class="header-holder" id="_h-holder">
+        <div class="header-bar-items" id="_header">
+          <svg  onclick="openList()"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#000000"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </div>
+        <ul id="_list">
+          <a href="#aboutus">About Us</a>
+          <a href="#moment">Moments</a>
+          <a href="#techers">Our Teachers</a>
+          <a href="#leaders"> Our Leaders</a>
+          <a href="students/students.html"> Know Us</a>
+        </ul>
       </div>
 
       <!---><!-->
@@ -59,7 +60,7 @@
           us together in coming years .
         </p>
       </div>
-      <div class="teacher" style="padding: 2vw 0 2vw 0">
+      <div class="teacher">
         <div class="teacher-img">
           <img
             style="top: -50px; left: 1px"

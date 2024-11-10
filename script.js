@@ -6,15 +6,25 @@ window.addEventListener("load", function () {
 });
 
 //header bar color change
-window.addEventListener('scroll',function(e){
-  var element = this.document.getElementById('_header');
+window.addEventListener("scroll", function (e) {
+  var element = this.document.getElementById("_h-holder");
   var x = this.window.scrollY;
-  if(x>this.window.innerHeight){
-     element.classList.add('k');
-    
-
-  }else{
-    element.classList.remove('k');
+  if (x > this.window.innerHeight) {
+    element.classList.add("k");
+  } else {
+    element.classList.remove("k");
   }
 });
- 
+
+var isOpen = false;
+function openList() {
+  var list = this.document.querySelector('.header-holder ul');
+  if (isOpen) {
+    list.style.display = 'none';
+    isOpen = false;
+  } else {
+    list.style.display = 'flex';
+    console.log(list);
+    isOpen = true;
+  }
+}
