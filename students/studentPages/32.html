@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athul Anto's Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: gold;
+        }
+        h2 {
+            color: gold;
+            margin-top: 30px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a {
+            color: gold;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Leaf animation */
+        @keyframes fly {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+            }
+        }
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(139, 69, 19, 0.8); /* Brown color for leaves */
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Leaf shape */
+            animation: fly linear infinite;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Randomly generating leaves -->
+<script>
+    const leafCount = 10; // Number of leaves to animate
+    const body = document.body;
+    
+    for (let i = 0; i < leafCount; i++) {
+        const leaf = document.createElement('div');
+        leaf.className = 'leaf';
+        leaf.style.left = Math.random() * 100 + 'vw'; // Random position across the width
+        leaf.style.animationDuration = Math.random() * 2 + 2 + 's'; // Random speed for each leaf
+        leaf.style.animationDelay = Math.random() * 2 + 's'; // Random delay
+        body.appendChild(leaf);
+        
+        // Remove leaf after animation ends
+        leaf.addEventListener('animationend', () => {
+            leaf.remove();
+        });
+    }
+</script>
+
+<div class="container">
+    <img src="https://i.ibb.co/RjfL41D/IMG-20241104-WA0030.jpg" alt="Athul Anto" class="profile-pic">
+    <h1>Athul Anto</h1>
+    <p><strong>Son of:</strong> Shijo P.A and Rosemin Shijo</p>
+    <p><strong>Date of Birth:</strong> [Your Date of Birth]</p>
+    <p><strong>Studying at:</strong> Sacred Heart Higher Secondary School, Payyavoor</p>
+
+    <h2>Ambition</h2>
+    <p>My ambition is to become an electrical engineer.</p>
+
+    <h2>Hobbies</h2>
+    <p>Making creative stuff with electrical components, and painting.</p>
+
+    <h2>Contact</h2>
+    <p><strong>Address:</strong> Panamparayil (H), Manikkadavu (po), Kolithattu, 670 705</p>
+    <p><strong>Phone:</strong> <a href="tel:+916282923609">+91 62829 23609</a></p>
+    <p><strong>Email:</strong> <a href="mailto:athulanto0012@gmail.com">athulanto0012@gmail.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/vava__0012" target="_blank">vava__0012</a></p>
+</div>
+
+</body>
+</html>
