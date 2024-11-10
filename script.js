@@ -6,15 +6,15 @@ window.addEventListener("load", function () {
 });
 
 //header bar color change
-window.addEventListener("scroll", function (e) {
-  var element = this.document.getElementById("_h-holder");
-  var x = this.window.scrollY;
-  if (x > this.window.innerHeight) {
-    element.classList.add("k");
-  } else {
-    element.classList.remove("k");
-  }
-});
+// window.addEventListener("scroll", function (e) {
+//   var element = this.document.getElementById("_h-holder");
+//   var x = this.window.scrollY;
+//   if (x > this.window.innerHeight) {
+//     element.classList.add("k");
+//   } else {
+//     element.classList.remove("k");
+//   }
+// });
 
 var isOpen = false;
 function openList() {

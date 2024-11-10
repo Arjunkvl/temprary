@@ -46,7 +46,7 @@ var studentNames =[
          for (let i = 0; i < 40; i++) {
             // Create the img-holder div
             const hold = document.createElement("div");
-            hold.style = "text-align:center;";
+            hold.className= "hold";
             const imgHolder = document.createElement("div");
             imgHolder.className = "img-holder";
   

@@ -213,15 +213,16 @@ h2 {
 .header-holder{
   z-index: 2;
   background-color: transparent;
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   width: 100%;
   height: 50px;
   position: fixed;
 }
-.k{
+/* .k{
   background-color: white;
- }
+ } */
 .header-holder ul{
   width: 100%;
   display: flex;
@@ -346,6 +347,65 @@ h2 {
 
 
 @media (max-width: 600px) {
+  .listOpen{
+    display: flex;
+  }
+  .header-bar-items{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .header-holder{
+    height: 50px;
+    display: flex;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+  }
+  .header-holder ul{
+    margin-top: 50px;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    display: none;
+    flex-direction: column;
+
+  }
+   .header-holder a{
+    margin-bottom: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+   }
+  .thr-img{
+    width: 110px;
+    height: 145px;
+  }
+  .thrs {
+    width: 90%;
+  }
+  .teacher{
+    width:100%;
+    padding: 0 0 0 0 ;
+    flex-direction: column;
+  }
+  .teacher p{
+    width: 85%;
+    text-align: center;
+  }
+  .bkg{
+    width: 100%;
+  }
+  .header h1 {
+    padding-top: 2vh;
+    font-size: 103px;
+  }
+
+  /* iijofjofi */
   .dynamic-flex {
     flex-direction: column;
   }
@@ -368,9 +428,7 @@ h2 {
     width: 100vw;
     height: 100vh;
  }
-  .header h1 {
-    font-size: 137px;
-  }
+   
 
   .header-bar {
     display: none;
@@ -386,7 +444,7 @@ h2 {
     }
 }
 
-@media (max-width:320px) {
+/* @media (max-width:320px) {
   .listOpen{
     display: flex;
   }
@@ -441,4 +499,4 @@ h2 {
     padding-top: 35vh;
     font-size: 100px;
   }
-}
+} */
