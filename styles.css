@@ -1,12 +1,13 @@
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 @font-face {
-  font-family: 'roboto';
-  src:url(Fonts/Roboto-Regular.ttf);
+  font-family: "roboto";
+  src: url(Fonts/Roboto-Regular.ttf);
 }
 body {
-  font-family: 'roboto';
+  font-family: "roboto";
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -84,6 +85,7 @@ h2 {
 }
 
 .header h1 {
+  text-shadow: 1px 3px 6px black;
   text-shadow: 5px 3px 9px black;
   font-size: 17vw;
   color: white;
@@ -167,7 +169,6 @@ h2 {
   padding: 0;
   text-align: left;
   width: 75vw;
-  
 }
 
 @keyframes dynamich1anim {
@@ -214,7 +215,7 @@ h2 {
   justify-content: right;
 }
 
-.header-holder{
+.header-holder {
   z-index: 2;
   background-color: transparent;
   backdrop-filter: blur(8px);
@@ -227,7 +228,7 @@ h2 {
 /* .k{
   background-color: white;
  } */
-.header-holder ul{
+.ulList {
   width: 100%;
   display: flex;
   align-items: center;
@@ -306,7 +307,7 @@ h2 {
   flex-direction: row;
   display: flex;
   padding: 2vw 0 2vw 0;
-  flex-wrap:  nowrap;
+  flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   width: 80%;
@@ -349,18 +350,14 @@ h2 {
   object-fit: cover;
 }
 
-
 @media (max-width: 600px) {
-  .listOpen{
-    display: flex;
-  }
-  .header-bar-items{
+  .header-bar-items {
     height: 50px;
     display: flex;
     justify-content: end;
     align-items: center;
   }
-  .header-holder{
+  .header-holder {
     height: 50px;
     display: flex;
     background-color: transparent;
@@ -369,39 +366,41 @@ h2 {
     justify-content: start;
     flex-direction: column;
   }
-  .header-holder ul{
+  .ulList {
     margin-top: 50px;
     width: 100%;
     background-color: white;
-     display: none;
+    display: none;
     flex-direction: column;
-
   }
-   .header-holder a{
+  .listOpen {
+    display: flex;
+  }
+  .header-holder a {
     margin-bottom: 20px;
     height: 20px;
     font-size: 20px;
     text-decoration: none;
     color: black;
     text-align: center;
-   }
-  .thr-img{
+  }
+  .thr-img {
     width: 110px;
     height: 145px;
   }
   .thrs {
     width: 90%;
   }
-  .teacher{
-    width:100%;
-    padding: 0 0 0 0 ;
+  .teacher {
+    width: 100%;
+    padding: 0 0 0 0;
     flex-direction: column;
   }
-  .teacher p{
+  .teacher p {
     width: 85%;
     text-align: center;
   }
-  .bkg{
+  .bkg {
     width: 100%;
   }
   .header h1 {
@@ -428,11 +427,10 @@ h2 {
     height: 45%;
     padding-top: 30vh;
   }
- .bkg{
+  .bkg {
     width: 100vw;
     height: 100vh;
- }
-   
+  }
 
   .header-bar {
     display: none;
@@ -442,10 +440,11 @@ h2 {
   }
   .prof-cont {
     width: 211px;
-    height: 211px;}
-    .lead-prof img{
-        width: 100%;
-    }
+    height: 211px;
+  }
+  .lead-prof img {
+    width: 100%;
+  }
 }
 
 /* @media (max-width:320px) {

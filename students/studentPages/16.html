@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mishbah</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to top, #000000, #9b007a); /* Gradient from black to magenta-like color (bottom to top) */
+            color: white;
+            position: relative;
+        }
+
+        /* Profile card styling as a floating element */
+        .card {
+            width: 320px;
+            padding: 20px;
+            background: #000000; /* Black background for the card */
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        /* Container for the profile photo to make it circular and center the image */
+        .profile-photo-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden; /* Ensures the image stays inside the circle */
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Spinning profile photo */
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the circle without distortion */
+            animation: spin 8s linear infinite; /* Spinning animation */
+        }
+
+        /* Spinning animation for profile photo */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            color: grey; /* Grey color for the name below the picture */
+        }
+
+        p, li {
+            color: white; /* White text for better contrast */
+        }
+
+        a.phone-number {
+            color: #9b007a; /* Magenta-like color for the phone number link */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.phone-number:hover {
+            color: #7a005c; /* Darker magenta color when hovered */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Profile card content -->
+    <div class="card">
+        <div class="profile-photo-container">
+            <img src="https://i.ibb.co/6cKwYhs/IMG-20241111-WA0003.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+        <h1>Misbah K.K</h1> <!-- Name below the picture in grey color -->
+        <p>My name is Misbah K.K. I am studying in Sacred Heart Higher Secondary School Payyavoor. I am a Computer Science student. My hobbies are watching Movies, Series, Anime, and playing games.</p>
+        <ul>
+            <li>Location: Mundanoor, Kannur</li>
+            <li>Phone: <a href="tel:+9074735456" class="phone-number">90747 35456</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
