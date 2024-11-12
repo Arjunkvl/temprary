@@ -2,7 +2,9 @@
 <head>
   <title>ALAN S EMMANUEL</title>
   <style>
+     
     body {
+      overflow-x: hidden;
    background-repeat: no-repeat;
    object-fit:cover;
    background-size:cover;
@@ -20,9 +22,51 @@
       height: 450px;
       margin: 20px;
     }
+
+    .particle {
+       
+        position: absolute;
+        background-color: transparent;
+        
+        animation: particleMove 10s linear infinite;
+        opacity: 0;
+      }
+      @keyframes particleMove {
+        0% {
+          transform: translate(0, 0);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(100vw, 100vh);
+          opacity: 0;
+        }
+      }
+      .imgu{
+        object-fit: cover;
+        height:20px;
+        width: 20px;
+      }
+
   </style>
 </head>
 <body>
+  <script>
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement("div");
+      v = document.createElement('img');
+      v.src = '../../Icons/music.png';
+      v.classList.add('imgu');
+      particle.classList.add("particle");
+      particle.appendChild(v);
+      document.body.appendChild(particle);
+      const size = Math.random() * 5 + 2;
+      // particle.style.width = `${size}px`;
+      // particle.style.height = `${size}px`;
+      particle.style.top = `${Math.random() * 100}vh`;
+      particle.style.left = `${Math.random() * 100}vw`;
+      particle.style.animationDuration = `${Math.random() * 5 + 2}s`;
+    }
+  </script>
   <div class="container">
     <img src="https://i.imgur.com/BTwodfc.jpg" alt="alan s emnanuel">
     <h1>ALAN S EMMANUEL</h1>
