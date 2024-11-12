@@ -46,7 +46,7 @@ const imgs = [
   "https://i.imgur.com/ehTlIGL.jpg",
   "https://i.imgur.com/pPnTzm3.jpg",
   "https://i.imgur.com/AOnpyRl.jpg",
-  "https://ibb.co/C67Zjjg",
+  "https://i.ibb.co/Scn8kkb/IMG-20241111-WA0001.jpg",
   "https://i.imgur.com/BTwodfc.jpg",
   "https://i.ibb.co/7vgdydS/Screenshot-20241110-185645.jpg",
   "https://i.ibb.co/BwSFXMQ/albin.jpg",
